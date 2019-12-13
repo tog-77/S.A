@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+    <center>
+        <div class="container">
+  <h2 class="h2">IMPORTS PERFUME</h2>
+</center>
+<div class="container">
+  <table class="table table-striped">
+    <head>
+      <tr>
+        <th>Produto</th>
+        <th>Descriçao do produto</th>
+        <th>Produto unitario</th>
+        <th>quantidade</th>
+        <th>Preço total</th>
+      </tr>
+    </head>
+    <body>
+      <tr>
+        <td><img src="malb.png" height="20%" width="30%"></td>
+        <td>Malbec Black Desodorante Colônia, 100ml</td>
+        <td>R$ 119,00</td>
+        <td><input type="number" id="malbec" onclick="calcularMalbec()">
+        <td><p id="totalMalbec"></p>
+      </tr>
+      <tr>
+        <td><img src="212.png" height="20%" width="30%"></td>
+        <td>212 Vip Carolina Herrera - Perfume Feminino - Eau de Parfum - 30ml</td>
+        <td>R$ 250,00</td>
+        <td><input type="number" id="viper" onclick="calcularViper()"> 
+        <td><p id="totalViper"></p>
+      </tr>
+      <tr>
+        <td><img src="ferrari.png" height="20%" width="30%"></td>
+        <td>PERFUME FERRARI BLACK MASCULINO EAU DE TOILETTE</td>
+        <td>R$ 180,00</td>
+        <td><input type="number"  id="ferrari" onclick="calcularFerrari()">
+        <td><p id="totalFerrari"></p>
+          <tr>
+            <td colspan="5"></td>
+            <td><button type="button" class="btn btn-dark btn-block" type="button" onclick="calculartotal()">calcular total</button>
+    
+          </tr>
+            
+      </tr>
+
+      <tr>
+          <td colspan="3"></td>
+          <td>Valor da compra:<p id="resultado"></p></td>
+        <tr>
+            <td colspan="4"></td>            
+             <td><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">FINALIZAR COMPRA</button></td> 
+            
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <p><input type="radio"><h10>cartoes de credito</h10>
+                      <p><img src="cc1.png" height="10%" width="50%"></p>
+                    <p><input type="radio"><h10>cartoes de debito</h10></p>
+                    <p><img src="cc2.png" height="10%" width="50%"></p>
+                    <p><input type="radio"><h10>boleto</h10></p>
+                    <p><img src="bo.png" height="10%" width="15%"></p>
+
+                    <p><div class="alert alert-success">
+                      <button type="button" class="btn btn-primary btn-block">finalizar compra</button></p>
+                    </div>
+                   
+
+                  </div>
+                </div>
+              </div>
+            </div>
+                        
+            </body>
+          </bory>
+          
+      </tr>
+    </body>
+  </table>
+</div>
+<script>
+           function calcularMalbec(){
+var x=document.getElementById("malbec").value;
+var total=x*119;
+document.getElementById("totalMalbec").innerHTML="R$ "+total+",00";
+}
+function calcularViper() {
+var x=document.getElementById("viper").value;
+var total=x*250;
+document.getElementById("totalViper").innerHTML="R$ "+total+" ,00";
+}
+function calcularFerrari() {
+var x=document.getElementById("ferrari").value;
+var total=x*180;
+document.getElementById("totalFerrari").innerHTML="R$ "+total+" ,00";
+}
+function calculartotal(){
+var a=document.getElementById("malbec").value;
+var b=document.getElementById("viper").value;
+var c=document.getElementById("ferrari").value;
+var total=parseFloat(a)*119+parseFloat(b)*250+parseFloat(c)*180;
+document.getElementById("resultado").innerHTML="R$"+total+",00";
+}
+
+
+            
+            </script>
+</body>
+</html>
